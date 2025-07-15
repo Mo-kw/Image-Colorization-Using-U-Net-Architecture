@@ -32,7 +32,7 @@ The U-Net architecture is composed of:
 
 After training, a subset of the test dataset is visualized by displaying grayscale inputs alongside their colorized outputs.
 
-![Sample Output](#) <!-- Optionally replace with a real image -->
+![Sample Colorization Output](https://github.com/Mo-kw/Image-Colorization-Using-U-Net-Architecture/raw/main/sample.png)
 
 ## 💾 Model Saving and Loading
 
@@ -55,11 +55,15 @@ The trained model is saved as `colorization_unet.pth` and can be reloaded for in
 3. Train the model with provided code
 4. Visualize predictions
 
+## 📓 Google Colab Notebook
+
+The full implementation, including data loading, model definition, training loop, and visualization, is available in the [Google Colab Notebook here](https://github.com/Mo-kw/Image-Colorization-Using-U-Net-Architecture/blob/main/Image_Colorization_Using_U_Net_Architecture.ipynb).
+
+
 ---
 
-> 🔍 **Note**: Make sure to update paths according to your environment when running locally or on Colab.
+> 🔍 **Note**: Make sure to update file paths according to your local environment or Google Colab when running the notebook.
 
 ## 📜 License
 
 This project is open source and available under the [MIT License](LICENSE).
-
