@@ -57,7 +57,10 @@ The trained model is saved as `colorization_unet.pth` and can be reloaded for in
 
 ## 📓 Google Colab Notebook
 
-The full implementation, including data loading, model definition, training loop, and visualization, is available in the [Google Colab Notebook here](https://colab.research.google.com/github/Mo-kw/Image-Colorization-Using-U-Net-Architecture/blob/main/Image_Colorization_Using_U_Net_Architecture.ipynb).
+The full implementation, including data loading, model definition, training loop, and visualization, is available in the notebook below:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Mo-kw/Image-Colorization-Using-U-Net-Architecture/blob/main/Image_Colorization_Using_U_Net_Architecture.ipynb)
+
 
 
 
