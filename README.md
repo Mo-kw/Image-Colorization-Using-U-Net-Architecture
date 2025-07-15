@@ -1,2 +1,65 @@
-# Image-Colorization-Using-U-Net-Architecture
-This project implements a U-Net model in PyTorch to automatically colorize grayscale landscape images. It trains on paired grayscale and color images by predicting the chrominance channels from luminance inputs in Lab color space. Mixed precision training is used for faster GPU performance, and results are visualized by converting back to RGB.
+# 🌄 Landscape Image Colorization using U-Net and PyTorch
+
+This project implements a deep learning-based solution for automatic image colorization using a U-Net architecture in PyTorch. It focuses on transforming grayscale landscape images into realistic colorized versions.
+
+## 📌 Overview
+
+Colorizing grayscale images is a classic problem in computer vision. In this project:
+
+- A custom dataset of landscape images is used, split into grayscale and color versions.
+- A U-Net model is trained to predict the chrominance (`ab`) components from the luminance (`L`) channel of Lab color space.
+- The output is reconstructed into RGB images for visualization.
+- Mixed Precision Training (AMP) is used for faster and more efficient training on GPU.
+
+## 🧠 Model
+
+The U-Net architecture is composed of:
+
+- **Encoder**: Downsampling layers that capture context.
+- **Decoder**: Upsampling layers with skip connections to restore resolution.
+- Final output is a 2-channel tensor (`ab` channels), applied with `tanh` activation.
+
+## 🏋️‍♂️ Training
+
+- **Loss Function**: MSELoss between predicted and ground truth `ab` channels.
+- **Optimizer**: Adam
+- **Training Epochs**: 20
+- **Batch Size**: 16
+- **Validation Split**: 10% of dataset
+- **AMP**: Mixed precision training with `torch.cuda.amp`
+
+## 📊 Visualization
+
+After training, a subset of the test dataset is visualized by displaying grayscale inputs alongside their colorized outputs.
+
+![Sample Output](#) <!-- Optionally replace with a real image -->
+
+## 💾 Model Saving and Loading
+
+The trained model is saved as `colorization_unet.pth` and can be reloaded for inference.
+
+## 🚀 Requirements
+
+- Python 3.8+
+- PyTorch
+- OpenCV
+- scikit-image
+- matplotlib
+- tqdm
+- kagglehub
+
+## 🔧 Usage
+
+1. Install dependencies
+2. Download dataset using `kagglehub`
+3. Train the model with provided code
+4. Visualize predictions
+
+---
+
+> 🔍 **Note**: Make sure to update paths according to your environment when running locally or on Colab.
+
+## 📜 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
